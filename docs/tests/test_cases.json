@@ -1,0 +1,110 @@
+[
+  {
+    "case_name": "Premium - Crítica (Palavra-chave 'parado')",
+    "payload": {
+      "titulo": "Sistema não loga",
+      "descricao": "Meu sistema está completamente parado e não consigo trabalhar.",
+      "tipo_cliente": "PREMIUM"
+    },
+    "expected_urgency": "CRITICA"
+  },
+  {
+    "case_name": "Premium - Alta (Palavra-chave 'lento')",
+    "payload": {
+      "titulo": "Relatório demorando",
+      "descricao": "O relatório de vendas está muito lento hoje.",
+      "tipo_cliente": "PREMIUM"
+    },
+    "expected_urgency": "ALTA"
+  },
+  {
+    "case_name": "Premium - Média (Palavra-chave 'dúvida')",
+    "payload": {
+      "titulo": "Ajuda com API",
+      "descricao": "Tenho uma dúvida sobre como fazer a integração.",
+      "tipo_cliente": "PREMIUM"
+    },
+    "expected_urgency": "MEDIA"
+  },
+  {
+    "case_name": "Premium - Sem Palavra-chave (Default)",
+    "payload": {
+      "titulo": "Obrigado",
+      "descricao": "O último chamado foi resolvido, obrigado.",
+      "tipo_cliente": "PREMIUM"
+    },
+    "expected_urgency": "MEDIA"
+  },
+  {
+    "case_name": "Basico - Crítica -> Rebaixa para ALTA",
+    "payload": {
+      "titulo": "App não abre",
+      "descricao": "Meu aplicativo está fora do ar.",
+      "tipo_cliente": "BASICO"
+    },
+    "expected_urgency": "ALTA"
+  },
+  {
+    "case_name": "Basico - Alta -> Rebaixa para MEDIA",
+    "payload": {
+      "titulo": "Erro ao salvar",
+      "descricao": "Recebendo um erro 500 ao tentar salvar o formulário.",
+      "tipo_cliente": "BASICO"
+    },
+    "expected_urgency": "MEDIA"
+  },
+  {
+    "case_name": "Basico - Sem Palavra-chave (Default)",
+    "payload": {
+      "titulo": "Sugestão de funcionalidade",
+      "descricao": "Gostaria de sugerir uma nova cor para o botão.",
+      "tipo_cliente": "BASICO"
+    },
+    "expected_urgency": "BAIXA"
+  },
+  {
+    "case_name": "Gratuito - Crítica -> Rebaixa para MEDIA",
+    "payload": {
+      "titulo": "Não consigo usar",
+      "descricao": "O sistema está parado, não faz login.",
+      "tipo_cliente": "GRATUITO"
+    },
+    "expected_urgency": "MEDIA"
+  },
+  {
+    "case_name": "Gratuito - Alta -> Rebaixa para BAIXA",
+    "payload": {
+      "titulo": "Bug visual",
+      "descricao": "Encontrei um bug na tela de login, o texto está cortado.",
+      "tipo_cliente": "GRATUITO"
+    },
+    "expected_urgency": "BAIXA"
+  },
+  {
+    "case_name": "Gratuito - Média -> Rebaixa para BAIXA",
+    "payload": {
+      "titulo": "Onde fica o manual?",
+      "descricao": "Preciso de ajuda para encontrar a documentação.",
+      "tipo_cliente": "GRATUITO"
+    },
+    "expected_urgency": "BAIXA"
+  },
+  {
+    "case_name": "Regra de Prioridade (Crítica > Média) - RN004.2",
+    "payload": {
+      "titulo": "Dúvida urgente!",
+      "descricao": "Tenho uma dúvida sobre porque o sistema está parado.",
+      "tipo_cliente": "PREMIUM"
+    },
+    "expected_urgency": "CRITICA"
+  },
+  {
+    "case_name": "Teste de Case Insensitive (lento vs LENTO)",
+    "payload": {
+      "titulo": "Performance",
+      "descricao": "O sistema está LENTO demais.",
+      "tipo_cliente": "PREMIUM"
+    },
+    "expected_urgency": "ALTA"
+  }
+]

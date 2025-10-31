@@ -1,0 +1,26 @@
+{
+  "name": "tests-e2e-priority-flow",
+  "version": "1.0.0",
+  "description": "Testes E2E automatizados para o sistema Priority Flow",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug"
+  },
+  "keywords": [
+    "tests",
+    "e2e",
+    "playwright",
+    "priority-flow",
+    "javascript"
+  ],
+  "author": "Lucas Geremias",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.2"
+  }
+}
